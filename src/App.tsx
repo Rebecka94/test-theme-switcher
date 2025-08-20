@@ -1,11 +1,9 @@
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <h1>Vite + React</h1>
+    <div className="flex items-center justify-center h-screen">
+      <h1>Theme Switcher</h1>
     </div>
   );
 }
-
-export default App;

@@ -8,16 +8,16 @@ test("Theme Switcher text should be visible", () => {
   expect(heading).toBeVisible();
 });
 
-test("clicking Light and Dark Mode buttons should change themes", () => {
+test("clicking Day and Night buttons should change themes", () => {
   render(<App />);
 
   const container = screen.getByText("Theme Switcher").parentElement;
 
   expect(container).toHaveClass("bg-white");
 
-  fireEvent.click(screen.getByText("Dark Mode"));
+  fireEvent.click(screen.getByText("Night"));
   expect(container).toHaveClass("bg-gray-900");
 
-  fireEvent.click(screen.getByText("Light Mode"));
+  fireEvent.click(screen.getByText("Day"));
   expect(container).toHaveClass("bg-white");
 });

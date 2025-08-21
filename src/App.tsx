@@ -2,9 +2,10 @@ import { useState } from "react";
 import "./App.css";
 import DarkModeButton from "./components/DarkModeButton";
 import LightModeButton from "./components/LightModeButton";
+import WeatherInfo from "./components/WeatherInfo";
 
 export default function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   const setDarkMode = () => {
     setTheme("dark");
@@ -19,6 +20,8 @@ export default function App() {
         theme === "light" ? "bg-white text-black" : "bg-gray-900 text-white"
       }`}
     >
+      <WeatherInfo theme={theme} sunrise="05:41" sunset="20:58" />
+
       <h1>Theme Switcher</h1>
       <div className="flex flex-row space-x-4 mt-4">
         <LightModeButton onClick={setLightMode} />

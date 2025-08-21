@@ -5,17 +5,24 @@ type Props = {
   };
   
   export default function WeatherInfo({ theme, sunrise, sunset }: Props) {
+
+    const formatTime = (isoString: string) =>
+        new Date(isoString).toLocaleTimeString("sv-SE", { hour: "2-digit", minute: "2-digit" });
+
+
     return (
       <div className="mt-4 text-lg text-center">
         {theme === "light" ? (
           <>
-            <p>🌅 : {sunrise}</p>
-            <p>🌇 : {sunset}</p>
+            <span className="text-4xl">☀️</span>
+          <p>Sunrise: {formatTime(sunrise)}</p>
+          <p>Sunset: {formatTime(sunset)}</p>
           </>
         ) : (
           <>
-            <p>🌙 : {sunset}</p>
-            <p>🌙 : {sunrise}</p>
+            <span className="text-4xl">🌙</span>
+          <p>Moonrise: {formatTime(sunrise)}</p>
+          <p>Moonset: {formatTime(sunset)}</p>
           </>
         )}
       </div>

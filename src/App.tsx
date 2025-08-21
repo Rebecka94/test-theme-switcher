@@ -25,23 +25,24 @@ export default function App() {
 
   return (
     <div
-      className={`flex flex-col items-center justify-center h-screen ${
-        theme === "light" ? "bg-white text-black" : "bg-gray-900 text-white"
-      }`}
+    className={`flex flex-col items-center justify-center h-screen ${
+      theme === "light" ? "bg-white text-black" : "bg-gray-900 text-white"
+    }`}
     >
       {sunData && (
         <WeatherInfo
-          theme={theme}
-          sunrise={sunData.sunrise}
-          sunset={sunData.sunset}
+        theme={theme}
+        sunrise={sunData.sunrise}
+        sunset={sunData.sunset}
         />
       )}
-
-      <h1>Theme Switcher</h1>
       <div className="flex flex-row space-x-4 mt-4">
         <DayButton onClick={setLightMode} />
         <NightButton onClick={setDarkMode} />
       </div>
+      <h1 className="py-2">
+      {theme === "light" ? "Switch to see moonrise" : "Switch to see sunrise"}
+    </h1>
     </div>
   );
 }

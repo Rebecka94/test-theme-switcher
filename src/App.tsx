@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import DarkModeButton from "./components/DarkModeButton";
-import LightModeButton from "./components/LightModeButton";
+import DayButton from "./components/DayButton";
+import NightButton from "./components/NightButton";
 import WeatherInfo from "./components/WeatherInfo";
 import { SunData, getSunTimes } from "./sunApi";
 
@@ -29,7 +29,6 @@ export default function App() {
         theme === "light" ? "bg-white text-black" : "bg-gray-900 text-white"
       }`}
     >
-
       {sunData && (
         <WeatherInfo
           theme={theme}
@@ -40,8 +39,8 @@ export default function App() {
 
       <h1>Theme Switcher</h1>
       <div className="flex flex-row space-x-4 mt-4">
-        <LightModeButton onClick={setLightMode} />
-        <DarkModeButton onClick={setDarkMode} />
+        <DayButton onClick={setLightMode} />
+        <NightButton onClick={setDarkMode} />
       </div>
     </div>
   );

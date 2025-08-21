@@ -1,11 +1,11 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import DarkModeButton from "./DarkModeButton";
+import NightButton from "./NightButton";
 
-describe("DarkModeButton", () => {
+describe("NightButton", () => {
   it("should render the button with correct text", () => {
-    const { getByText } = render(<DarkModeButton onClick={() => {}} />);
-    const button = getByText("Dark Mode");
+    const { getByText } = render(<NightButton onClick={() => {}} />);
+    const button = getByText("Night");
     expect(button).toBeInTheDocument();
   });
 });

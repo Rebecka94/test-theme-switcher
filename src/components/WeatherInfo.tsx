@@ -16,13 +16,11 @@ type Props = {
           <>
             <span className="text-4xl">☀️</span>
           <p>Sunrise: {formatTime(sunrise)}</p>
-          <p>Sunset: {formatTime(sunset)}</p>
           </>
         ) : (
           <>
             <span className="text-4xl">🌙</span>
-          <p>Moonrise: {formatTime(sunrise)}</p>
-          <p>Moonset: {formatTime(sunset)}</p>
+          <p>Moonrise: {formatTime(sunset)}</p>
           </>
         )}
       </div>

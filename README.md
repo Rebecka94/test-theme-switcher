@@ -2,7 +2,7 @@
 
 ## Beskrivning
 Detta är en liten webbapplikation byggd i **React med Vite**.  
-Appen hämtar solens upp- och nedgångstider från ett öppet API och låter användaren växla mellan **ljus** (dag) och **mörk** (natt) tema.  
+Appen hämtar solens upp- och nedgångstider i Göteborg från ett öppet API och låter användaren växla mellan **ljus** (dag) och **mörk** (natt) tema.  
 
 ### Syfte
 Huvudsyftet med projektet är att öva på **testning i React**:

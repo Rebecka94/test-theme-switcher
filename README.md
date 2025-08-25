@@ -1,19 +1,37 @@
-# Kodbas för Enhets- och integrationstestning av React komponenter.
+# 🌞🌙 Theme Switcher App
 
-## Installation
+## Beskrivning
+Detta är en liten webbapplikation byggd i **React med Vite**.  
+Appen hämtar solens upp- och nedgångstider från ett öppet API och låter användaren växla mellan **ljus** (dag) och **mörk** (natt) tema.  
 
-Kör `npm install` för att installera alla paket.
+### Syfte
+Huvudsyftet med projektet är att öva på **testning i React**:
+- Att skriva **enhetstester** för enskilda komponenter.
+- Att skriva **integrationstester** som säkerställer att props och state fungerar korrekt mellan komponenter.  
 
-## Utveckling
+---
 
-Kör `npm run dev` för att starta utvecklingsservern.
+## Installation och körning
 
-## Testning
+#### 1. Klona projektet
+```bash
+git clone https://github.com/Rebecka94/test-theme-switcher
+```
+#### 2. Installera beroenden
+npm install
 
-Kör `npm test` för att köra testerna. Kan köras utan att utvecklingsservern är igång.
+#### 3. Starta utvecklingsservern
+npm run dev
 
-## Coverage
+---
 
-Kör `npm run coverage` för att se hur stor del av kodbasen som testerna täcker.
+### Bygg projektet
+npm run build
 
-Observera att det nu finns en mapp [coverage](./coverage) med en massa filer (en hemsida). Du kan starta [index.html](./coverage/index.html) filen med live server för att öppna hemsidan. Där ser du mer detaljer om vad dina tester faktiskt testar och inte.
+---
+
+### För att få upp testmiljön
+npm test
+
+
+
